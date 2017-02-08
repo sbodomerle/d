@@ -11,11 +11,26 @@ endfunction
 " Specify a directory for plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'tpope/vim-fugitive'
+
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'rdnetto/YCM-Generator', { 'on': ['YcmGenerateConfig', 'CCGenerateConfig'], 'branch': 'stable' }
 
 " Initialize plugin system
 call plug#end()
+
+" vim-fugitive {
+  nnoremap <silent> <Leader>gs :Gstatus<CR>
+  nnoremap <silent> <Leader>gd :Gdiff<CR>
+  nnoremap <silent> <Leader>gc :Gcommit<CR>
+  nnoremap <silent> <Leader>gb :Gblame<CR>
+  nnoremap <silent> <Leader>gl :Glog<CR>
+  nnoremap <silent> <Leader>gp :Git push<CR>
+  nnoremap <silent> <Leader>gr :Gread<CR>
+  nnoremap <silent> <Leader>gw :Gwrite<CR>
+  nnoremap <silent> <Leader>ge :Gedit<CR>
+  nnoremap <silent> <Leader>gi :Git add -p %<CR>
+" }
 
 " YouCompleteMe {
   let g:ycm_error_symbol='✖'
