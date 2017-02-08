@@ -1,3 +1,5 @@
+[init]
+	templatedir = ~/.git_template
 [user]
 	name = Sandor Bodo-Merle
 	email = (none)
