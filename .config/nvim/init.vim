@@ -11,6 +11,8 @@ endfunction
 " Specify a directory for plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+
 Plug 'tpope/vim-fugitive'
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
@@ -18,6 +20,15 @@ Plug 'rdnetto/YCM-Generator', { 'on': ['YcmGenerateConfig', 'CCGenerateConfig'],
 
 " Initialize plugin system
 call plug#end()
+
+" tagbar {
+  let g:tagbar_left = 1
+  let g:tagbar_autofocus = 1
+  nnoremap <F9> :TagbarToggle<CR>
+  inoremap <F9> <ESC>:TagbarToggle<CR>
+  nnoremap <Leader>tt :TagbarToggle<CR>
+  let g:tagbar_sort = 0
+" }
 
 " vim-fugitive {
   nnoremap <silent> <Leader>gs :Gstatus<CR>
