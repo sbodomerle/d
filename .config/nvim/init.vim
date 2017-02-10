@@ -14,6 +14,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'rdnetto/YCM-Generator', { 'on': ['YcmGenerateConfig', 'CCGenerateConfig'], 'branch': 'stable' }
@@ -41,6 +42,19 @@ call plug#end()
   nnoremap <silent> <Leader>gw :Gwrite<CR>
   nnoremap <silent> <Leader>ge :Gedit<CR>
   nnoremap <silent> <Leader>gi :Git add -p %<CR>
+" }
+
+" vim-gitgutter {
+  " consistent with airline
+  let g:gitgutter_sign_added = '+'
+  let g:gitgutter_sign_modified = '~'
+  let g:gitgutter_sign_removed = '-'
+
+  let g:gitgutter_sign_removed_first_line = '^^'
+  let g:gitgutter_sign_modified_removed = 'ww'
+  let g:gitgutter_override_sign_column_highlight = 0
+
+  nnoremap <silent> <Leader>tg :GitGutterToggle<CR>
 " }
 
 " YouCompleteMe {
