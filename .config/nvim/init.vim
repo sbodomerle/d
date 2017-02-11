@@ -19,6 +19,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'rdnetto/YCM-Generator', { 'on': ['YcmGenerateConfig', 'CCGenerateConfig'], 'branch': 'stable' }
 
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+
 " Initialize plugin system
 call plug#end()
 
@@ -107,4 +109,13 @@ call plug#end()
     autocmd FileType c,cpp
                 \   nnoremap <LocalLeader>gp :YcmCompleter GetParent<CR>
   augroup END
+" }
+
+" vim-go {
+  let g:go_highlight_types = 1
+  let g:go_highlight_fields = 1
+  let g:go_highlight_methods = 1
+  let g:go_highlight_operators = 1
+  let g:go_highlight_functions = 1
+  let g:go_highlight_build_constraints = 1
 " }
