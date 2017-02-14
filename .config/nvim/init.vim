@@ -11,6 +11,7 @@ endfunction
 " Specify a directory for plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'w0rp/ale'
 Plug 'neomake/neomake'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
@@ -24,6 +25,11 @@ Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 
 " Initialize plugin system
 call plug#end()
+
+" ale {
+  nmap <Leader>en <Plug>(ale_next)
+  nmap <Leader>ep <Plug>(ale_previous)
+" }
 
 " tagbar {
   let g:tagbar_left = 1
