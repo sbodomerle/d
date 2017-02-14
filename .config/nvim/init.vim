@@ -11,6 +11,7 @@ endfunction
 " Specify a directory for plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'neomake/neomake'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
 Plug 'tpope/vim-fugitive'
