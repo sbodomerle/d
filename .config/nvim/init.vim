@@ -14,6 +14,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'w0rp/ale'
 Plug 'neomake/neomake'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+Plug 'tpope/vim-unimpaired'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
