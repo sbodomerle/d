@@ -1,5 +1,7 @@
+[alias]
+	ctags = !$(git rev-parse --git-dir)/hooks/ctags
 [init]
-	templatedir = ~/.git_template
+	templatedir = ~/.config/git/template
 [user]
 	name = Sandor Bodo-Merle
 	email = (none)
