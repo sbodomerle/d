@@ -1,4 +1,5 @@
 [alias]
+	check-whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
 	ctags = !$(git rev-parse --git-dir)/hooks/ctags
 [init]
 	templatedir = ~/.config/git/template
