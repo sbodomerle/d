@@ -4,6 +4,8 @@
 	it = "!f() { git -C \"$1\" init; git -C \"$1\" commit -m \"root\" --allow-empty; }; f"
 [init]
 	templatedir = ~/.config/git/template
+[merge]
+	conflictstyle = diff3
 [user]
 	name = Sandor Bodo-Merle
 	email = (none)
