@@ -3,6 +3,8 @@
 	ctags = !$(git rev-parse --git-dir)/hooks/ctags
 	it = "!f() { git -C \"$1\" init; git -C \"$1\" commit -m \"root\" --allow-empty; }; f"
 	locate = !sh -c 'git ls-files | grep --color=auto "$1"' -
+[apply]
+	whitespace = fix
 [init]
 	templatedir = ~/.config/git/template
 [merge]
