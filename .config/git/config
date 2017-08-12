@@ -9,6 +9,9 @@
 	templatedir = ~/.config/git/template
 [merge]
 	conflictstyle = diff3
+[rerere]
+	autoupdate = true
+	enabled = true
 [user]
 	name = Sandor Bodo-Merle
 	email = (none)
