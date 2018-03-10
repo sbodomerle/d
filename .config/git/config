@@ -5,6 +5,9 @@
 	locate = !sh -c 'git ls-files | grep --color=auto "$1"' -
 [apply]
 	whitespace = fix
+[diff]
+	algorithm = histogram
+	renames = copy
 [init]
 	templatedir = ~/.config/git/template
 [merge]
