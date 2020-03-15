@@ -1,6 +1,7 @@
 [alias]
 	amend = commit -v --amend
 	check-whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
+	ci = commit -vv
 	ctags = !$(git rev-parse --git-common-dir)/hooks/ctags
 	it = "!f() { git -C \"$1\" init; git -C \"$1\" commit -m \"root\" --allow-empty; }; f"
 	locate = !sh -c 'git ls-files | grep --color=auto "$1"' -
