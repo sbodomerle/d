@@ -1,9 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 PATH="/usr/local/bin:$PATH"
 dir=$(git rev-parse --git-dir)
 
-trap 'rm -f $dir/$$.tags' EXIT
+trap 'rm -f $dir/$$.tags $dir/tags.lock' INT QUIT TERM EXIT
+
+(
+flock -n 200 || exit 0
 
 git ls-files | ctags --tag-relative=never -L - -f"$dir/$$.tags" --languages=-javascript,sql --fields=*
 mv "$dir/$$.tags" "$dir/tags"
+rm -f "$dir"/tags.lock
+) 200>"$dir"/tags.lock
